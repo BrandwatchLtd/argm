@@ -1,3 +1,9 @@
+argm (1:1.0.2-1) unstable; urgency=medium
+
+  * Switch to new versioning
+
+ -- Ilya Peretyagin <ilya@brandwatch.com>  Fri, 22 Sep 2017 10:16:41 +0100
+
 argm (1.0.2-1) unstable; urgency=medium
 
   * Initial release
