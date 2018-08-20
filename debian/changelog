@@ -1,0 +1,17 @@
+argm (1:1.0.3-1) unstable; urgency=medium
+
+  * Fix segfault when all rows are filtered out
+
+ --  <alexey@ev9d9.btn1.brandwatch.net>  Mon, 20 Aug 2018 15:50:24 +0100
+
+argm (1:1.0.2-1) unstable; urgency=medium
+
+  * Switch to new versioning
+
+ -- Ilya Peretyagin <ilya@brandwatch.com>  Fri, 22 Sep 2017 10:16:41 +0100
+
+argm (1.0.2-1) unstable; urgency=medium
+
+  * Initial release
+
+ -- Ilya Peretyagin <ilya@brandwatch.com>  Wed, 23 Aug 2017 13:30:03 +0100
