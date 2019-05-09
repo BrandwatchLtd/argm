@@ -1,30 +1,32 @@
 /*
  * FUNCTIONAL TESTS
  */
-begin;
-
-create extension argm;
+\i sql/setup/setup.sql
 
 create table tbl as 
 select d,
-	i,
-	grp::text || '-' || d || '-' || repeat(i::text, 10) txt,
-	grp
+       i,
+       grp::text || '-' || d || '-' || repeat(i::text, 10) txt,
+       grp
 from (
-	select date'2011-11-11' - generate_series(1, 8) d,
-		generate_series(1, 9) i
-	order by random()
+       select date'2011-11-11' - di d,
+              i
+       from generate_series(1, 9) i
+       cross join generate_series(1, 8) di
+       order by random()
 ) _
 cross join (values
-	(1),
-	(2),
-	(3)
+       (1),
+       (2),
+       (3)
 ) grp (grp);
 
 analyze tbl;
 
-select grp, argmax(txt, i, d), argmin(array[txt], (i, d)) from tbl group by grp order by grp;
+select grp, argmax(txt, i, d), argmin(array[txt], 1, i, d) from tbl group by grp order by grp;
+-- TODO: rewrite like this after anonymous record types handling is fixed
+-- select grp, argmax(txt, i, d), argmin(array[txt], (i, d)) from tbl group by grp order by grp;
 
 select argmax(1, 2) filter (where false);
 
-rollback;
+\i sql/setup/teardown.sql
