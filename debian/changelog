@@ -1,8 +1,14 @@
+argm (1:1.1.1-1) unstable; urgency=medium
+
+  * Enable parallel execution
+
+ --  <alexey@brandwatch.com>  Thu, 9 May 2019 14:09:44 +0100
+
 argm (1:1.0.3-1) unstable; urgency=medium
 
   * Fix segfault when all rows are filtered out
 
- --  <alexey@ev9d9.btn1.brandwatch.net>  Mon, 20 Aug 2018 15:50:24 +0100
+ --  <alexey@brandwatch.com>  Mon, 20 Aug 2018 15:50:24 +0100
 
 argm (1:1.0.2-1) unstable; urgency=medium
 
