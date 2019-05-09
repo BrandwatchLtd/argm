@@ -16,8 +16,20 @@ node ('docker') {
     }
     dir ("${WORKSPACE}")
     {
-        stage ('Upload to repository') {
-            sh 'for deb in postgresql-argm*.deb; do for dest in http://apt.service0.btn1.bwcom.net/packages https://aptly.stage.brandwatch.net/packages; do curl -u "aptly:ohV9oxo3at5leeMoh2ahNiochahpaive" $dest -F "my_file=@${deb}" -F "name=${deb}"; done; done';
+        stage ('Upload to repositories') {
+            [
+                'http://apt.service0.btn1.bwcom.net/packages',
+                'https://aptly.stage.brandwatch.net/packages'
+            ].each { aptly_uploader_url ->
+                withCredentials([usernameColonPassword(credentialsId: 'aptly-uploader', variable: 'USERPASS')]) {
+                    sh """
+                        for deb in postgresql-argm*.deb; do
+                            # \$ for substitution to perform on Bash side, not in Groovy
+                            curl --max-redirs 0 -f -u "${USERPASS}" "${aptly_uploader_url}" -F "my_file=@\${deb}" -F "name=\${deb}"
+                        done
+                    """
+                }
+            }
         }
         stage ('Cleanup') {
             cleanWs();
