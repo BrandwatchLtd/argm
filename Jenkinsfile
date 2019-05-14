@@ -29,14 +29,13 @@ node ('docker') {
         stage ('Upload to repositories') {
             if (params.publish) {
                 [
-                    'http://apt.service0.btn1.bwcom.net/packages',
-                    'https://aptly.stage.brandwatch.net/packages'
+                    'http://apt.service0.btn1.bwcom.net/publish'
                 ].each { aptly_uploader_url ->
                     withCredentials([usernameColonPassword(credentialsId: 'aptly-uploader', variable: 'USERPASS')]) {
                         sh """
                             for deb in postgresql-argm*.deb; do
                                 # \$ for substitution to perform on Bash side, not in Groovy
-                                curl --max-redirs 0 -f -u "${USERPASS}" "${aptly_uploader_url}" -F "my_file=@\${deb}" -F "name=\${deb}"
+                                curl --max-redirs 0 -f -u "${USERPASS}" "${aptly_uploader_url}" -F "file=@\${deb}" -F "name=\${deb}"
                             done
                         """
                     }
