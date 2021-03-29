@@ -1,3 +1,11 @@
+argm (1:1.1.1-1) unstable; urgency=high
+
+  * Fix segfault when executed in parallel, at least two workers end up
+    with uninitialized states due to filtering, and these states get
+    combined
+
+ --  <alexey@brandwatch.com>  Mon, 29 Mar 2021 14:04:55 +0100
+
 argm (1:1.1.0-1) unstable; urgency=medium
 
   * Enable parallel execution
