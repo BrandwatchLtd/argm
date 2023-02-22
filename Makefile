@@ -8,3 +8,4 @@ REGRESS = argm anyold
 PG_CONFIG = pg_config
 PGXS := $(shell $(PG_CONFIG) --pgxs)
 include $(PGXS)
+CC = aarch64-linux-gnu-gcc
