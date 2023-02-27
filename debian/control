@@ -17,11 +17,11 @@ Description: argmin and argmax functions
  .
  This package contains the server extension for PostgreSQL 10.
 
-Package: postgresql-argm-13
+Package: postgresql-argm-14
 Architecture: any
-Depends: postgresql-13, ${shlibs:Depends}, ${misc:Depends}
+Depends: postgresql-14, ${shlibs:Depends}, ${misc:Depends}
 Description: argmin and argmax functions
  This PostgreSQL extension proivide several aggregate functions that could be
  used for SQL queries simplification and speedup.
  .
- This package contains the server extension for PostgreSQL 13.
+ This package contains the server extension for PostgreSQL 14.
