@@ -1,7 +1,7 @@
 Source: argm
 Section: database
 Priority: optional
-Maintainer: Alexey Bashtanov <alexey@brandwatch.com>
+Maintainer: Robert Cardell <robert.cardell@brandwatch.com>
 Build-Depends: debhelper (>= 9), postgresql-server-dev-all (>= 180)
 Standards-Version: 3.9.8
 Homepage: https://github.com/BrandwatchLtd/argm
@@ -11,8 +11,8 @@ Vcs-Browser: https://github.com/BrandwatchLtd/argm
 Package: postgresql-argm-PGVERSION
 Architecture: any
 Depends: postgresql-PGVERSION, ${shlibs:Depends}, ${misc:Depends}
-Description: argmin and argmax functions
- This PostgreSQL extension proivide several aggregate functions that could be
- used for SQL queries simplification and speedup.
+Description: argmin and argmax functions for PostgreSQL
+ This PostgreSQL extension provides several aggregate functions that could be
+ used to simplify and speed up queries.
  .
  This package contains the server extension for PostgreSQL PGVERSION.
