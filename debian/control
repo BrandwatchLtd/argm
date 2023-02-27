@@ -11,17 +11,53 @@ Vcs-Browser: https://github.com/BrandwatchLtd/argm
 Package: postgresql-argm-10
 Architecture: any
 Depends: postgresql-10, ${shlibs:Depends}, ${misc:Depends}
-Description: argmin and argmax functions
+Description: argmin and argmax functions for PostgreSQL
  This PostgreSQL extension provides several aggregate functions that could be
- used for SQL queries simplification and speedup.
+ used to simplify and speed up queries.
  .
  This package contains the server extension for PostgreSQL 10.
+
+Package: postgresql-argm-11
+Architecture: any
+Depends: postgresql-11, ${shlibs:Depends}, ${misc:Depends}
+Description: argmin and argmax functions for PostgreSQL
+ This PostgreSQL extension provides several aggregate functions that could be
+ used to simplify and speed up queries.
+ .
+ This package contains the server extension for PostgreSQL 11.
+
+Package: postgresql-argm-12
+Architecture: any
+Depends: postgresql-12, ${shlibs:Depends}, ${misc:Depends}
+Description: argmin and argmax functions for PostgreSQL
+ This PostgreSQL extension provides several aggregate functions that could be
+ used to simplify and speed up queries.
+ .
+ This package contains the server extension for PostgreSQL 12.
+
+Package: postgresql-argm-13
+Architecture: any
+Depends: postgresql-13, ${shlibs:Depends}, ${misc:Depends}
+Description: argmin and argmax functions for PostgreSQL
+ This PostgreSQL extension provides several aggregate functions that could be
+ used to simplify and speed up queries.
+ .
+ This package contains the server extension for PostgreSQL 13.
 
 Package: postgresql-argm-14
 Architecture: any
 Depends: postgresql-14, ${shlibs:Depends}, ${misc:Depends}
-Description: argmin and argmax functions
- This PostgreSQL extension proivide several aggregate functions that could be
- used for SQL queries simplification and speedup.
+Description: argmin and argmax functions for PostgreSQL
+ This PostgreSQL extension provides several aggregate functions that could be
+ used to simplify and speed up queries.
  .
  This package contains the server extension for PostgreSQL 14.
+
+Package: postgresql-argm-15
+Architecture: any
+Depends: postgresql-15, ${shlibs:Depends}, ${misc:Depends}
+Description: argmin and argmax functions for PostgreSQL
+ This PostgreSQL extension provides several aggregate functions that could be
+ used to simplify and speed up queries.
+ .
+ This package contains the server extension for PostgreSQL 15.
