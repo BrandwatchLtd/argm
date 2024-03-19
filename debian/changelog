@@ -1,3 +1,9 @@
+argm (1:1.1.2-2) unstable; urgency=low
+
+  *  Build against Postgres 16
+
+ --  <robert.cardell@brandwatch.com>  Tue, 19 Mar 2024 14:00:00 +0000
+
 argm (1:1.1.2-1) unstable; urgency=high
 
   *  Fix string comparison
