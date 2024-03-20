@@ -1,3 +1,9 @@
+argm (1:1.1.2-1) unstable; urgency=high
+
+  *  Fix string comparison
+
+ --  <alexey@brandwatch.com>  Wed, 10 Nov 2021 16:44:38 +0000
+
 argm (1:1.1.1-1) unstable; urgency=high
 
   * Fix segfault when executed in parallel, at least two workers end up
